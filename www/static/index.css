@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #b6b6b6;
+    background-color: #96B6C5;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
@@ -18,6 +18,7 @@ div.sidebar,
     width: 40%;
     max-width: 700px;
     height: 100%;
+    background-color: #ADC4CE;
 }
 
 div.sidebar {
@@ -32,10 +33,11 @@ div.welcome-message {
     top: 20px;
     right: 20px;
 
-    font-size: 0px; /* Updated by JavaScript */
+    font-size: 0px;
+    /* Updated by JavaScript */
     text-align: center;
     font-weight: bold;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 div.sign-in-button {
@@ -102,7 +104,6 @@ div.here-now-title {
     font-style: italic;
     text-align: center;
     color: black;
-    background-color: #d1d1d1;
 }
 
 div.here-now-title:first-line {
@@ -151,6 +152,24 @@ table.here-now-table.disabled td {
     cursor: default;
 }
 
+div.here-now-background {
+    background-color: #EEE0C9;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+}
+
+#scanner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    background-color: transparent;
+    border-color: #555555;
+}
+
 /* Manage devices button and status lights */
 
 div.manage-devices-button {
@@ -173,8 +192,8 @@ div.manage-devices-button {
     font-size: 25px;
     line-height: 50px;
     text-align: center;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -235,7 +254,7 @@ div.popup-menu {
 
     border-radius: 40px;
     box-shadow: 0px 0px 15px 0px #4e4e4e;
-    background-color: white;
+    background-color: #ADC4CE;
     overflow: hidden;
 
     opacity: 0%;
@@ -248,6 +267,7 @@ div.popup-menu {
         opacity: 0%;
         transform: scale(0.95, 0.95);
     }
+
     to {
         opacity: 100%;
         transform: none;
@@ -259,6 +279,7 @@ div.popup-menu {
         opacity: 100%;
         transform: none;
     }
+
     to {
         opacity: 0%;
         transform: scale(0.95, 0.95);
@@ -275,7 +296,7 @@ div.popup-menu.invisible {
     animation-name: popup-menu-disappear;
 }
 
-div.popup-menu > div {
+div.popup-menu>div {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -293,7 +314,7 @@ div.popup-menu div.close-button {
     padding-top: 15px;
 }
 
-div.popup-menu div.close-button > span {
+div.popup-menu div.close-button>span {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -312,7 +333,7 @@ div.popup-menu div.warning {
     color: #ff2626;
 }
 
-div.popup-menu > div.people-list table {
+div.popup-menu>div.people-list table {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -320,12 +341,13 @@ div.popup-menu > div.people-list table {
     text-align: center;
 }
 
-div.popup-menu > div.people-list table td {
+div.popup-menu>div.people-list table td {
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
 }
-div.popup-menu > div.people-list table.disabled td {
+
+div.popup-menu>div.people-list table.disabled td {
     color: #929292;
     cursor: default;
 }
@@ -337,15 +359,16 @@ div.popup-menu div.thanks-message {
     transform: translate(-50%, -50%);
 
     text-align: center;
-    font-size: 25px; /* Used by line break for spacing */
+    font-size: 25px;
+    /* Used by line break for spacing */
 }
 
-div.popup-menu div.thanks-message > span:first-child {
+div.popup-menu div.thanks-message>span:first-child {
     font-size: 70px;
     font-weight: bold;
 }
 
-div.popup-menu div.thanks-message > span:last-child {
+div.popup-menu div.thanks-message>span:last-child {
     font-size: 40px;
 }
 
@@ -353,51 +376,50 @@ div.popup-menu div.manage-devices-details span.add-address {
     text-decoration: underline;
 }
 
-div.popup-menu div.manage-devices-details > table:nth-child(3) {
+div.popup-menu div.manage-devices-details>table:nth-child(3) {
     margin-top: 15px;
     width: 100%;
-    background-color: #cfcfcf;
     border-collapse: collapse;
 }
 
-div.popup-menu div.manage-devices-details > table:nth-child(3) td:first-child {
+div.popup-menu div.manage-devices-details>table:nth-child(3) td:first-child {
     padding: 25px 25px 10px 25px;
     font-size: 25px;
 }
 
-div.popup-menu div.manage-devices-details > table:nth-child(3) td:last-child {
+div.popup-menu div.manage-devices-details>table:nth-child(3) td:last-child {
     width: 250px;
 }
 
-div.popup-menu div.manage-devices-details > table:nth-child(3) td:last-child > div {
+div.popup-menu div.manage-devices-details>table:nth-child(3) td:last-child>div {
     max-width: 100%;
     max-height: 100%;
 }
 
-div.popup-menu div.manage-devices-details > table:nth-child(3) td:last-child > div > img {
+div.popup-menu div.manage-devices-details>table:nth-child(3) td:last-child>div>img {
     position: relative;
     width: calc(100% - (25px * 2));
     padding: 25px;
 }
 
-div.popup-menu div.manage-devices-details > div:nth-child(4) {
+div.popup-menu div.manage-devices-details>div:nth-child(4) {
     padding: 20px 35px 10px 35px;
     font-size: 25px;
     font-weight: bold;
 }
 
-div.popup-menu div.manage-devices-details > div:nth-child(5) {
+div.popup-menu div.manage-devices-details>div:nth-child(5) {
     padding: 0px 35px 0px 35px;
     margin-bottom: 25px;
     font-size: 25px;
     font-family: "Courier New", Courier, monospace;
 }
 
-div.popup-menu div.manage-devices-details > div:nth-child(5) > div {
+div.popup-menu div.manage-devices-details>div:nth-child(5)>div {
     white-space: pre;
 }
 
-div.popup-menu div.manage-devices-details > div:nth-child(5) > div > span {
+div.popup-menu div.manage-devices-details>div:nth-child(5)>div>span {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -433,4 +455,19 @@ div.popup-menu div.manage-devices-details > div:nth-child(5) > div > span {
     top: 0px;
     width: 100%;
     height: 100%;
+}
+
+#rightside {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+#teamlogo {
+    width: 80%;
+    object-fit: contain;
 }

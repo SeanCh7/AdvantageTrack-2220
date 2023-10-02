@@ -8,6 +8,7 @@ const welcomeMessageHeightPercentageTarget = 15;
 const welcomeMessageDiv = document.getElementsByClassName("welcome-message")[0];
 const signInButton = document.getElementsByClassName("sign-in-button")[0];
 const manageDevicesButton = document.getElementsByClassName("manage-devices-button")[0];
+const signInBox = document.getElementById("scanner");
 
 const serverStatusElement = document.getElementsByClassName("status-lights")[0].children[0];
 const monitorStatusElement = document.getElementsByClassName("status-lights")[0].children[1];
@@ -80,6 +81,16 @@ window.addEventListener("load", () => {
     window.addEventListener("resize", updateLayout);
     document.addEventListener("configupdate", updateLayout);
     document.addEventListener("statusupdate", updateStatusLights);
+
+    signInBox.addEventListener("keyup", (event) => {
+        let signID = parseInt(signInBox.value)
+        event.preventDefault();
+        if (event.key == "Enter") {
+            console.log(parseInt(signInBox.value))
+            window.popupMenu.signIn(signID)
+            signInBox.value = "";
+        }
+    })
 });
 
 // If we're still alive, the necessary JS features are supported

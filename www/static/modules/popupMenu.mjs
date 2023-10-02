@@ -112,6 +112,21 @@ export class PopupMenu {
         this.#state = newState;
     }
 
+    signIn(signid) {
+        console.log(signid)
+
+        var hereNowLookup = {};
+        window.dataCache["here_now"].forEach((x) => {
+            hereNowLookup[x["person"]] = x["manual"];
+        });
+
+        document.dispatchEvent(
+            new CustomEvent("sendsignin", {
+                detail: signid
+            })
+        );
+    }
+
     /** Updates the list of names in the tables. */
     #updateTables() {
         while (this.#signInPeopleTableBody.firstChild) {
